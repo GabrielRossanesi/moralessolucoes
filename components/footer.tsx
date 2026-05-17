@@ -21,12 +21,13 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-[#ded7c8] bg-[#f4efe5] text-[#18150f]">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-      <div className="absolute -right-24 top-12 h-56 w-56 rounded-full bg-gold/10 blur-3xl" />
+    <footer className="relative overflow-hidden bg-[#f4efe5] text-[#18150f]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,#06080c_0%,rgba(22,18,12,0.92)_20%,rgba(72,54,25,0.38)_52%,rgba(244,239,229,0)_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_50%_0%,rgba(239,211,139,0.16),rgba(244,239,229,0)_70%)]" />
+      <div className="absolute -right-24 top-24 h-56 w-56 rounded-full bg-gold/10 blur-3xl" />
       <div className="absolute -left-20 bottom-10 h-48 w-48 rounded-full bg-cyanSoft/10 blur-3xl" />
 
-      <div className="container-shell relative py-14 md:py-18">
+      <div className="container-shell relative pb-14 pt-28 md:pb-18 md:pt-32">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.72fr_1fr_1.15fr] lg:gap-14">
           <div className="max-w-sm">
             <Link href="/" className="inline-flex items-center gap-3" aria-label={siteConfig.name}>
