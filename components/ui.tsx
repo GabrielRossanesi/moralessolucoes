@@ -196,10 +196,10 @@ type CTASectionProps = {
 
 export function CTASection({ title, text, ctaText, ctaHref, eyebrow = "Conversa inicial", image = "/brand/hero-main.jpg" }: CTASectionProps) {
   return (
-    <Section className="relative overflow-hidden bg-ink pb-28 pt-20 md:pb-36 md:pt-32">
+    <Section className="relative overflow-hidden bg-ink pb-24 pt-20 md:pb-32 md:pt-32">
       <Image src={assetPath(image)} alt="" fill sizes="100vw" className="object-cover opacity-[0.25]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#06080c,rgba(6,8,12,0.85)),linear-gradient(0deg,#06080c,rgba(6,8,12,0.15))]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,rgba(244,239,229,0)_0%,rgba(244,239,229,0.16)_48%,#f4efe5_100%)] md:h-36" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-[linear-gradient(180deg,rgba(244,239,229,0)_0%,rgba(244,239,229,0)_72%,rgba(244,239,229,0.18)_90%,#f4efe5_100%)] md:h-20" />
       <Container>
         <Reveal className="max-w-4xl">
           <SectionEyebrow dark={true} className="mb-5">{eyebrow}</SectionEyebrow>

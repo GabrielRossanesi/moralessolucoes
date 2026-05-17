@@ -21,8 +21,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#f4efe5] text-[#18150f]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(6,8,12,0.08),rgba(244,239,229,0)_78%)]" />
+    <footer className="relative overflow-hidden bg-[#f4efe5] text-[#18150f] shadow-[inset_0_18px_30px_rgba(24,21,15,0.025)]">
       <div className="absolute -right-24 top-14 h-56 w-56 rounded-full bg-gold/10 blur-3xl" />
       <div className="absolute -left-20 bottom-10 h-48 w-48 rounded-full bg-cyanSoft/10 blur-3xl" />
 
