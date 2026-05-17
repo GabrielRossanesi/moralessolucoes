@@ -1,4 +1,5 @@
 import { whatsappUrl } from "@/lib/utils";
+import { assetPath } from "@/lib/site-config";
 
 export const site = {
   name: "Morales Soluções",
@@ -99,7 +100,7 @@ export const servicePages = {
     message:
       "Campanhas estruturadas para atrair pessoas certas, reduzir desperdício de verba e gerar oportunidades reais de venda.",
     cta: "Falar sobre tráfego",
-    image: "/brand/hero-main.jpg",
+    image: assetPath("/brand/hero-main.jpg"),
     whatsapp: whatsappUrl("Olá, quero estruturar campanhas de tráfego pago com a Morales."),
     features: [
       "Google Ads",
@@ -133,7 +134,7 @@ export const servicePages = {
     message:
       "Conteúdo profissional para fortalecer sua marca, gerar confiança e manter sua empresa presente na mente do cliente.",
     cta: "Falar sobre social media",
-    image: "/brand/hero-social.png",
+    image: assetPath("/brand/hero-social.png"),
     whatsapp: whatsappUrl("Olá, quero fortalecer minha marca com social media da Morales."),
     features: [
       "Gestão de Instagram",
@@ -166,7 +167,7 @@ export const servicePages = {
     message:
       "Tecnologia sob medida para automatizar processos, profissionalizar sua operação e criar experiências digitais mais eficientes.",
     cta: "Falar sobre tecnologia",
-    image: "/brand/hero-main.jpg",
+    image: assetPath("/brand/hero-main.jpg"),
     whatsapp: whatsappUrl("Olá, quero criar uma solução digital com a Morales."),
     features: [
       "Landing pages",

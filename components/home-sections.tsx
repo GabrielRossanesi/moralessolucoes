@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AnimatedText, fadeUp, Reveal, staggerContainer } from "@/components/animations";
 import { ButtonLink, SectionHeader, ServiceCard, ProcessStep, CTASection, SectionEyebrow } from "@/components/ui";
 import { audience, differentials, processSteps, services } from "@/lib/site-data";
-import { getWhatsappUrl } from "@/lib/site-config";
+import { assetPath, getWhatsappUrl } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
@@ -20,7 +20,7 @@ export function HomeHero() {
   return (
     <section data-header-theme="dark" className="relative flex min-h-[89svh] items-center overflow-hidden bg-ink pt-28">
       <Image
-        src="/brand/hero-office.jpg"
+        src={assetPath("/brand/hero-office.jpg")}
         alt=""
         fill
         priority
@@ -55,7 +55,7 @@ export function HomeHero() {
               }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Image src="/brand/logo-principal.png" alt="Morales Soluções" width={300} height={60} className="h-12 w-auto md:h-16 object-contain" priority />
+              <Image src={assetPath("/brand/logo-principal.png")} alt="Morales Soluções" width={300} height={60} className="h-12 w-auto md:h-16 object-contain" priority />
             </motion.div>
           </motion.div>
 
@@ -171,7 +171,7 @@ export function ServicesSection() {
 export function ProcessTimeline() {
   return (
     <section data-header-theme="dark" className="section-shell relative bg-ink">
-      <Image src="/brand/hero-social.png" alt="" fill sizes="100vw" className="object-cover opacity-[0.18]" />
+      <Image src={assetPath("/brand/hero-social.png")} alt="" fill sizes="100vw" className="object-cover opacity-[0.18]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#06080c,rgba(6,8,12,0.74)),linear-gradient(0deg,#06080c,rgba(6,8,12,0.18),#06080c)]" />
       <div className="container-shell relative grid gap-12 lg:grid-cols-[0.82fr_1fr] lg:items-start">
         <Reveal className="lg:sticky lg:top-28">

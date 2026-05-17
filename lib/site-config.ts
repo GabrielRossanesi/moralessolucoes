@@ -51,6 +51,23 @@ export const siteConfig = {
   },
 };
 
+export const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function assetPath(path: string) {
+  if (!path || path.startsWith("http") || path.startsWith("data:")) {
+    return path;
+  }
+
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const normalizedBasePath = publicBasePath.startsWith("/") ? publicBasePath : `/${publicBasePath}`;
+
+  if (!publicBasePath || normalizedPath.startsWith(`${normalizedBasePath}/`)) {
+    return normalizedPath;
+  }
+
+  return `${normalizedBasePath}${normalizedPath}`;
+}
+
 export function getWhatsappUrl(message: string) {
   const encodedMessage = encodeURIComponent(message);
   return `${siteConfig.links.whatsapp}?text=${encodedMessage}`;

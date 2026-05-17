@@ -7,7 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { siteConfig } from "@/lib/site-config";
+import { assetPath, siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -33,7 +33,7 @@ export function Header() {
         )}>
           <Link href="/" className="flex min-w-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-goldSoft rounded-lg" aria-label="Morales Soluções">
             <Image 
-              src="/brand/logo-principal.png" 
+              src={assetPath("/brand/logo-principal.png")}
               alt="Morales Soluções" 
               width={300} 
               height={60} 

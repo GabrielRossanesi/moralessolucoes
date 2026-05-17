@@ -4,7 +4,7 @@ import { Award, CalendarDays, Cpu, LayoutTemplate, Palette, Smartphone, Target, 
 
 import { AnimatedText, Reveal } from "@/components/animations";
 import { ButtonLink, SectionHeader, ServiceCard, ProcessStep, FeatureCard, CTASection, Section, Container, SectionEyebrow } from "@/components/ui";
-import { getWhatsappUrl } from "@/lib/site-config";
+import { assetPath, getWhatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Social Media Profissional | Morales Soluções",
@@ -16,7 +16,7 @@ export default function SocialMediaPage() {
     <>
       {/* Hero */}
       <Section className="flex min-h-[85svh] items-center overflow-hidden pt-28 pb-16 md:pb-24" data-header-theme="dark">
-        <Image src="/brand/hero-social.png" alt="" fill sizes="100vw" priority className="object-cover opacity-[0.35]" />
+        <Image src={assetPath("/brand/hero-social.png")} alt="" fill sizes="100vw" priority className="object-cover opacity-[0.35]" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,8,12,0.95),rgba(6,8,12,0.75)_50%,rgba(6,8,12,0.95)),linear-gradient(0deg,#06080c,rgba(6,8,12,0.15)_40%)]" />
         <div className="dark-grid absolute inset-0 opacity-[0.15]" />
 

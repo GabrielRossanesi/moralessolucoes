@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { AnimatedText, Reveal } from "@/components/animations";
+import { assetPath } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 type ButtonLinkProps = {
@@ -154,7 +155,7 @@ export function PageHero({ title, subtitle, eyebrow, image, ctaText, ctaHref }: 
     <Section className="flex min-h-[78svh] items-end overflow-hidden pt-28 pb-16 md:pb-24">
       {image && (
         <>
-          <Image src={image} alt="" fill sizes="100vw" priority className="object-cover opacity-[0.4]" />
+          <Image src={assetPath(image)} alt="" fill sizes="100vw" priority className="object-cover opacity-[0.4]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,8,12,0.92),rgba(6,8,12,0.66)_52%,rgba(6,8,12,0.92)),linear-gradient(0deg,#06080c,rgba(6,8,12,0.08)_44%)]" />
           <div className="dark-grid absolute inset-0 opacity-[0.15]" />
         </>
@@ -196,7 +197,7 @@ type CTASectionProps = {
 export function CTASection({ title, text, ctaText, ctaHref, eyebrow = "Conversa inicial", image = "/brand/hero-main.jpg" }: CTASectionProps) {
   return (
     <Section className="relative bg-ink py-20 md:py-32">
-      <Image src={image} alt="" fill sizes="100vw" className="object-cover opacity-[0.25]" />
+      <Image src={assetPath(image)} alt="" fill sizes="100vw" className="object-cover opacity-[0.25]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#06080c,rgba(6,8,12,0.85)),linear-gradient(0deg,#06080c,rgba(6,8,12,0.15))]" />
       <Container>
         <Reveal className="max-w-4xl">

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { getWhatsappUrl, siteConfig } from "@/lib/site-config";
+import { assetPath, getWhatsappUrl, siteConfig } from "@/lib/site-config";
 
 const solutions = [
   { label: "Gestão de tráfego", href: "/trafego-pago" },
@@ -31,7 +31,7 @@ export function Footer() {
           <div className="max-w-sm">
             <Link href="/" className="inline-flex items-center gap-3" aria-label={siteConfig.name}>
               <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[#d9cfbb] bg-white/60 shadow-[0_12px_34px_rgba(24,21,15,0.08)]">
-                <Image src="/brand/logo-profile.png" alt="" fill sizes="48px" className="object-contain p-1.5" />
+                <Image src={assetPath("/brand/logo-profile.png")} alt="" fill sizes="48px" className="object-contain p-1.5" />
               </span>
               <span className="text-xl font-black tracking-[-0.01em] text-[#18150f]">{siteConfig.name}</span>
             </Link>
