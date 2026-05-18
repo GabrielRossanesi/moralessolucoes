@@ -3,7 +3,9 @@ import Image from "next/image";
 import { Cpu, MonitorPlay, Target, Zap } from "lucide-react";
 
 import { AnimatedText, Reveal } from "@/components/animations";
+import { FAQSection } from "@/components/faq-section";
 import { ButtonLink, SectionHeader, ServiceCard, ProcessStep, FeatureCard, CTASection, Section, Container, SectionEyebrow } from "@/components/ui";
+import { faqContent } from "@/lib/faqs";
 import { assetPath, getWhatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -213,6 +215,8 @@ export default function TrafegoPagoPage() {
           </div>
         </Container>
       </Section>
+
+      <FAQSection {...faqContent.trafegoPago} />
 
       {/* CTA Final */}
       <CTASection 

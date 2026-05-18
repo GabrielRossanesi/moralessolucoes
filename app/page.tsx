@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { FAQSection } from "@/components/faq-section";
 import {
   AudienceSection,
   DifferentialsSection,
@@ -9,6 +10,7 @@ import {
   ProcessTimeline,
   ServicesSection,
 } from "@/components/home-sections";
+import { faqContent } from "@/lib/faqs";
 
 export const metadata: Metadata = {
   title: "Morales Soluções | Crescimento digital com marketing e tecnologia",
@@ -25,6 +27,7 @@ export default function Home() {
       <ProcessTimeline />
       <DifferentialsSection />
       <AudienceSection />
+      <FAQSection {...faqContent.home} />
       <FinalCTA />
     </>
   );
